@@ -24,7 +24,7 @@ const LoginPage = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/login", // http://localhost:5000/api/auth/signup
+        "https://quizcompetition.onrender.com/api/auth/login", // http://localhost:5000/api/auth/signup
 
         {
           method: "POST",
@@ -62,7 +62,7 @@ const LoginPage = () => {
         );
 
         const scoreCheck = await fetch(
-          `http://localhost:5000/api/auth/score/check/${formData.email}`
+          `https://quizcompetition.onrender.com/api/auth/score/check/${formData.email}`
         );
         const scoreData = await scoreCheck.json();
         console.log("Score Check Response:", scoreData);

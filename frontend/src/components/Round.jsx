@@ -229,7 +229,7 @@ useEffect(() => {
 
       try {
         const res = await axios.post(
-          "http://localhost:5000/api/auth/check-submission",
+          "https://quizcompetition.onrender.com/api/auth/check-submission",
           { email: storedEmail }
         );
         if (res.data.alreadySubmitted) {
@@ -295,7 +295,7 @@ useEffect(() => {
     setScore(finalScore);
 
     try {
-      await axios.post("http://localhost:5000/api/auth/submit", {
+      await axios.post("https://quizcompetition.onrender.com/api/auth/submit", {
         teamName,
         email,
         score: finalScore,

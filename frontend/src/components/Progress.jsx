@@ -10,7 +10,7 @@ const Progress = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/auth/leaderboard');
+        const response = await axios.get('https://quizcompetition.onrender.com/api/auth/leaderboard');
         const leaderboardData = response.data;
 
         leaderboardData.sort((a, b) => b.score - a.score);

@@ -12,7 +12,7 @@ const Admin = () => {
   useEffect(() => {
     const fetchLoginUsers = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/auth/login-users');
+        const response = await fetch('https://quizcompetition.onrender.com/api/auth/login-users');
         if (response.ok) {
           const data = await response.json();
           setLoginUsers(data);
@@ -33,7 +33,7 @@ const Admin = () => {
   const fetchRound1Scores = async () => {
     setLoadingScores(true);
     try {
-      const response = await fetch('http://localhost:5000/api/auth/round1-scores');
+      const response = await fetch('https://quizcompetition.onrender.com/api/auth/round1-scores');
       if (response.ok) {
         const data = await response.json();
         data.sort((a, b) => b.score - a.score);
@@ -51,7 +51,7 @@ const Admin = () => {
 
   const deleteLoginUser = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/login-users/${id}`, {
+      const response = await fetch(`https://quizcompetition.onrender.com/api/auth/login-users/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {
@@ -67,7 +67,7 @@ const Admin = () => {
 
   const deleteRound1Score = async (id) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/auth/round1-scores/${id}`, {
+      const response = await fetch(`https://quizcompetition.onrender.com/api/auth/round1-scores/${id}`, {
         method: 'DELETE',
       });
       if (response.ok) {

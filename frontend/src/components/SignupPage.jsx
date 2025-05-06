@@ -30,7 +30,7 @@ const SignupPage = () => {
     setLoading(true); // start loader
     try {
       const response = await fetch(
-        "http://localhost:5000/api/auth/signup",
+        "https://quizcompetition.onrender.com/api/auth/signup",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
