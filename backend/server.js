@@ -11,7 +11,7 @@ const app = express();
 // app.use(cors());
 
 app.use(cors({
-  origin: 'https://quiz-competition-one.vercel.app/', // Frontend URL
+  origin: 'https://quiz-competition-one.vercel.app', // Frontend URL
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 }));
